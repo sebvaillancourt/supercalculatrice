@@ -79,16 +79,11 @@ void cprintf(char text[1000], char color[11])
     WORD wOldColorAttrs;
     CONSOLE_SCREEN_BUFFER_INFO csbiInfo;
 
-    /*
-     * First save the current color information
-     */
+    //First save the current color information
     GetConsoleScreenBufferInfo(h, &csbiInfo);
     wOldColorAttrs = csbiInfo.wAttributes;
 
-    /*
-     * Set the new color information
-     */
-
+    //Set the new color information
     if(color=="BLACK")
     {
         SetConsoleTextAttribute ( h, 0 );
